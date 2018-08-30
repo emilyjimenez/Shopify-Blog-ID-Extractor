@@ -23,14 +23,6 @@ let getAllIds = function(urlsArr) {
 
 
 $(document).ready(function(){
-  let newWebscrape = new Webscrape();
-  
-  $("#check-scrape").submit(function(event) {
-  event.preventDefault();
-  let url = $("#url").val();
-  newWebscrape.getWebScrape(url, displayScrape, error);
-  });
-
   $("#url-array").submit(function(event) {
     event.preventDefault();
     let urls = $("#urls").val();

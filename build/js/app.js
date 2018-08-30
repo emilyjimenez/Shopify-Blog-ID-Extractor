@@ -57,14 +57,6 @@ var getAllIds = function getAllIds(urlsArr) {
 };
 
 $(document).ready(function () {
-  var newWebscrape = new _Webscrape.Webscrape();
-
-  $("#check-scrape").submit(function (event) {
-    event.preventDefault();
-    var url = $("#url").val();
-    newWebscrape.getWebScrape(url, displayScrape, error);
-  });
-
   $("#url-array").submit(function (event) {
     event.preventDefault();
     var urls = $("#urls").val();

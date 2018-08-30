@@ -1,30 +1,40 @@
-# Rename
-##### by Adam Titus
+# _Webscraping Exploration_
 
-### Description
+## _So that I can update these shopify metas a lot easier_
+
+#### By _Emily Wells Jiménez_
+
+###### _08.30.18_
+
+## Description
+
+_Quick fix for getting to blog admin pages in Shopify. Needed to know if I can still code... I can._
 
 
-### Installation Instructions
+## Setup/Installation Requirements
 * Clone to desktop
 * Open it with text Editor
 * type npm install and wait for it to complete
 * type bower install and wait for it to complete
 * type gulp serve
 
-### Technology Needed
-* Node.js
-* Bower
-* Code Text Editor
-* Working browser with internet connection
+## Technologies Used
 
-### Known Bugs
+* HTML
+* CSS
+* JavaScript
+  * JQuery
+  * Node.js
+    * Gulp
+    * Bower
+    * Babel
+* Google Chrome
 
 
-### Contact Me
-You can reach me at adamtitus76@gmail.com or connect with me on [linkedin](www.linkedin.com/in/adam-titus-06740b149).
-#### Legal
-This is licensed under the MIT license
+## License
 
-Copyright (c) 2017 Adam Titus All Rights Reserved.
+Free under the MIT License
 
-_If you find a way to monetize this please contact the author_
+_Copyright (c) 2018 Emily Wells Jiménez (EWJ Consulting)
+
+
