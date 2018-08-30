@@ -1,7 +1,7 @@
 import { Webscrape } from "./../js/Webscrape.js";
 
 let error = function(error) {
-  $("#output").text("Something went wrong, no doctors found!");
+  $("#output").text("Something went wrong!");
 };
 
 let displayScrape = function(response) {
@@ -11,6 +11,14 @@ let displayScrape = function(response) {
   console.log("please be id: ", id);
   $("#blog-id").text(id);
 };
+
+let getAllIds = function(urlsArr) {
+  for (let i = 0; i < urlsArr.length; i++) {
+    let index = urlsArr[i];
+    let newWebscrape = new Webscrape;
+    newWebscrape.getWebScrape(index, displayScrape, error);
+  } 
+}
 
 
 
@@ -27,7 +35,7 @@ $(document).ready(function(){
     event.preventDefault();
     let urls = $("#urls").val();
     let urlsArr = urls.split("\n");
-    console.log(urlsArr);
+    getAllIds(urlsArr);
     });
 
   

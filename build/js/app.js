@@ -37,7 +37,7 @@ var Webscrape = exports.Webscrape = function () {
 var _Webscrape = require("./../js/Webscrape.js");
 
 var error = function error(_error) {
-  $("#output").text("Something went wrong, no doctors found!");
+  $("#output").text("Something went wrong!");
 };
 
 var displayScrape = function displayScrape(response) {
@@ -46,6 +46,14 @@ var displayScrape = function displayScrape(response) {
   var id = script.match(/rid\":([\d].*?)};<\/script>/)[1];
   console.log("please be id: ", id);
   $("#blog-id").text(id);
+};
+
+var getAllIds = function getAllIds(urlsArr) {
+  for (var i = 0; i < urlsArr.length; i++) {
+    var index = urlsArr[i];
+    var newWebscrape = new _Webscrape.Webscrape();
+    newWebscrape.getWebScrape(index, displayScrape, error);
+  }
 };
 
 $(document).ready(function () {
@@ -61,7 +69,7 @@ $(document).ready(function () {
     event.preventDefault();
     var urls = $("#urls").val();
     var urlsArr = urls.split("\n");
-    console.log(urlsArr);
+    getAllIds(urlsArr);
   });
 });
 
