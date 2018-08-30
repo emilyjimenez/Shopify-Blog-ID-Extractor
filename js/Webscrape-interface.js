@@ -5,8 +5,11 @@ let error = function(error) {
 };
 
 let displayScrape = function(response) {
-  $("#output").text(response); 
+  let id = response.match(/<script id="__st">\[ \]<\/script>/)[1];
+  $("#output").text(id); 
 };
+
+
 
 $(document).ready(function(){
   let newWebscrape = new Webscrape();

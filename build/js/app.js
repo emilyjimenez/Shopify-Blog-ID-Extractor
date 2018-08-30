@@ -41,7 +41,8 @@ var error = function error(_error) {
 };
 
 var displayScrape = function displayScrape(response) {
-  $("#output").text(response);
+  var id = response.match(/<script id="__st">\[ \]<\/script>/)[1];
+  $("#output").text(id);
 };
 
 $(document).ready(function () {
