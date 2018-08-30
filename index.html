@@ -2,30 +2,25 @@
 <html>
 <head>
   <link href="/css/master.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <script src="/build/js/vendor.min.js"></script>
   <script src="/build/js/app.js"></script>
   <title>Webscrape</title>
 </head>
-<body>
-  <h1>I AM TRYING THINGZ</h1>
-  <p id="test"></p>
-
-  <form id="check-scrape">
-    <label for="url">URL:</label>
-     <textarea id="url" type="text"></textarea>
-      <button id="submit" type="submit">SUBMIT</button>
-  </form>
-
-  <div class="refine">
-    <p>Now lets get the blog ID</p>
-    <div id="blog-id"></div>
-  </div>
-
-  <form id="url-array">
-      <textarea id="urls" type="text"></textarea>
-      <button id="submit-array" type="submit">SUBMIT</button>
-  </form>
-  
-</body>
+  <body>
+    <div class="container">
+      <h1>Shopify Blog IDs</h1>
+      <div class="refine">
+        <p>BLOG IDS</p>
+        <ul class="list-unstyled">
+          <span id="blog-id"></span>
+        </ul>   
+      </div>
+      <form id="url-array">
+          <textarea id="urls" type="text"></textarea>
+          <button id="submit-array" type="submit">SUBMIT</button>
+      </form>
+    </div>
+  </body>
 </html>
 

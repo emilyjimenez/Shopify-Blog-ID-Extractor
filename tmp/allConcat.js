@@ -9,7 +9,7 @@ let displayScrape = function(response) {
   console.log("this is the id ", script);
   let id = script.match(/rid\":([\d].*?)};<\/script>/)[1];
   console.log("please be id: ", id);
-  $("#blog-id").text(id);
+  $("#blog-id").append(`<li>${id}</li>`);
 };
 
 let getAllIds = function(urlsArr) {
@@ -37,6 +37,4 @@ $(document).ready(function(){
     let urlsArr = urls.split("\n");
     getAllIds(urlsArr);
     });
-
-  
 });
