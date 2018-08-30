@@ -45,18 +45,23 @@ var displayScrape = function displayScrape(response) {
   console.log("this is the id ", script);
   var id = script.match(/rid\":([\d].*?)};<\/script>/)[1];
   console.log("please be id: ", id);
-  $("#output").text(response);
+  $("#blog-id").text(id);
 };
 
 $(document).ready(function () {
   var newWebscrape = new _Webscrape.Webscrape();
 
-  console.log("Loaded");
-  $("#test").text("Template Working");
   $("#check-scrape").submit(function (event) {
     event.preventDefault();
     var url = $("#url").val();
     newWebscrape.getWebScrape(url, displayScrape, error);
+  });
+
+  $("#url-array").submit(function (event) {
+    event.preventDefault();
+    var urls = $("#urls").val();
+    var urlsArr = urls.split("\n");
+    console.log(urlsArr);
   });
 });
 

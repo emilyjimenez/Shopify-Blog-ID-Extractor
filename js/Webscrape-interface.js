@@ -9,7 +9,7 @@ let displayScrape = function(response) {
   console.log("this is the id ", script);
   let id = script.match(/rid\":([\d].*?)};<\/script>/)[1];
   console.log("please be id: ", id);
-  $("#output").text(response); 
+  $("#blog-id").text(id);
 };
 
 
@@ -17,13 +17,18 @@ let displayScrape = function(response) {
 $(document).ready(function(){
   let newWebscrape = new Webscrape();
   
-  console.log("Loaded");
-  $("#test").text("Template Working");
   $("#check-scrape").submit(function(event) {
   event.preventDefault();
   let url = $("#url").val();
   newWebscrape.getWebScrape(url, displayScrape, error);
   });
+
+  $("#url-array").submit(function(event) {
+    event.preventDefault();
+    let urls = $("#urls").val();
+    let urlsArr = urls.split("\n");
+    console.log(urlsArr);
+    });
 
   
 });
