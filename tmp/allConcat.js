@@ -5,8 +5,11 @@ let error = function(error) {
 };
 
 let displayScrape = function(response) {
-  let id = response.match(/<script id="__st">\[ \]<\/script>/)[1];
-  $("#output").text(id); 
+  let script = response.match(/<script id="__st">.*?<\/script>/)[0];
+  console.log("this is the id ", script);
+  let id = script.match(/rid\":([\d].*?)};<\/script>/)[1];
+  console.log("please be id: ", id);
+  $("#output").text(response); 
 };
 
 
