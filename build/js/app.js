@@ -45,23 +45,31 @@ var displayScrape = function displayScrape(response) {
   console.log("this is the id ", script);
   var id = script.match(/rid\":([\d].*?)};<\/script>/)[1];
   console.log("please be id: ", id);
-  $("#blog-id").append("<li>" + id + "</li>");
+  // $("#blog-id").append(`<li><a href="https://betsyandiya.myshopify.com/admin/blogs/39293445/articles/${id}">https://betsyandiya.myshopify.com/admin/blogs/39293445/articles/${id}</a></li>`);
 };
 
-var getAllIds = function getAllIds(urlsArr) {
-  for (var i = 0; i < urlsArr.length; i++) {
-    var index = urlsArr[i];
-    var newWebscrape = new _Webscrape.Webscrape();
-    newWebscrape.getWebScrape(index, displayScrape, error);
-  }
-};
+// let getAllIds = function(urlsArr) {
+//   // for (let i = 0; i < urlsArr.length; i++) {
+//   //   let index = urlsArr[i];
+//   //   let newWebscrape = new Webscrape;
+//   //   newWebscrape.getWebScrape(index, displayScrape, error);
+//   // } 
+// }
+
 
 $(document).ready(function () {
   $("#url-array").submit(function (event) {
     event.preventDefault();
+    var newWebscrape = new _Webscrape.Webscrape();
     var urls = $("#urls").val();
     var urlsArr = urls.split("\n");
-    getAllIds(urlsArr);
+    // console.log(urlsArr);
+    // getAllIds(urlsArr);
+    urlsArr.forEach(function (urls) {
+      console.log(urls);
+
+      newWebscrape.getWebScrape(urls, displayScrape, error);
+    });
   });
 });
 
