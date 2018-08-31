@@ -4,13 +4,9 @@ export class Webscrape {
   }
 
 //get example site
-    getWebScrape(response, displayScrape, error) {
-     $.get('https://allorigins.me/get?method=raw&url=' + encodeURIComponent(`${response}`) + '&callback=?')
-     .then(function(response){
+    getWebScrape(response, displayScrape) {
+     $.get('https://allorigins.me/get?method=raw&url=' + encodeURIComponent(`${response}`) + '&callback=?', function(response){
       displayScrape(response);
-    }).fail(function(error) {
-      throw(error);
     });
   }
-
 }
