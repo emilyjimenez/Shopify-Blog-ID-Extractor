@@ -19,7 +19,7 @@ let displayScrape = function(response) {
   console.log("this is the id ", script);
   let id = script.match(/rid\":([\d].*?)};<\/script>/)[1];
   console.log("please be id: ", id);
-  $("#blog-id").append(`<li>${id}</li>`);
+  $("#blog-id").append(`<li><a href="BLOGURLHERE${id}">put your blog url here without the ID, which is...${id}</a></li>`);
 };
 
 $(document).ready(function(){
