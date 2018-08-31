@@ -19,7 +19,7 @@ let displayScrape = function(response) {
   console.log("this is the id ", script);
   let id = script.match(/rid\":([\d].*?)};<\/script>/)[1];
   console.log("please be id: ", id);
-  $("#blog-id").append(`<li><a href="https://betsyandiya.myshopify.com/admin/blogs/39293445/articles/${id}">https://betsyandiya.myshopify.com/admin/blogs/39293445/articles/${id}</a></li>`);
+  $("#blog-id").append(`<li><${id}</li>`);
 };
 
 $(document).ready(function(){

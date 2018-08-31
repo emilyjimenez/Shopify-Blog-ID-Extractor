@@ -10,10 +10,17 @@
 
 _Quick fix for getting to blog admin pages in Shopify. Needed to know if I can still code... I can._
 
+**Note** This extractor probably only works for some Shopify blog pages... depends on how your site is structured but works for me!
+
+## Screenshot
+
+![sample data and ui](https://i.imgur.com/BxPpyNo.png)
+
 
 ## Setup/Installation Requirements
 * Clone to desktop
-* Open it with text Editor
+* Open with text Editor
+* Open terminal
 * type npm install and wait for it to complete
 * type bower install and wait for it to complete
 * type gulp serve
@@ -35,6 +42,6 @@ _Quick fix for getting to blog admin pages in Shopify. Needed to know if I can s
 
 Free under the MIT License
 
-_Copyright (c) 2018 Emily Wells Jiménez (EWJ Consulting)
+_Copyright (c) 2018 Emily Wells Jiménez (EWJ Consulting)_
 
 
